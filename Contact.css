@@ -1,0 +1,196 @@
+#wrap{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+    scroll-behavior: smooth;
+}
+html, body{
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #F2E9CE;
+}
+:root {
+            --bg-color: #F2E9CE;       
+            --header-bg: #fffaeb;     
+            --primary-text: #BF2A52;   
+            --accent-pink: #e44a73;
+            --font-heading: 'Fredoka', sans-serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+a { text-decoration: none; }
+ul { list-style: none; }
+
+#header {
+            background-color: var(--header-bg);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: relative;
+            top: 0;
+            z-index: 100;
+            height: 80px;
+}
+
+.logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+}
+#logo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+}
+
+#text1 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            color: var(--primary-text);
+            font-weight: 500;
+}
+
+.nav-links {
+            display: flex;
+            gap: 30px;
+}
+
+.nav-links li {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            position: relative;
+}
+
+.nav-links li a {
+            color: var(--accent-pink);
+            transition: color 0.3s;
+}
+
+.nav-links li::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-pink);
+            transition: width 0.5s ease;
+}
+
+.nav-links li:hover::after {
+            width: 100%;
+}
+#main-content{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 160px;
+    align-items: flex-start;
+    margin-top: 50px;
+    opacity: 0; 
+    animation: slideDownFadeIn 1s ease-out 0.3s forwards;
+}
+@keyframes slideDownFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#container{
+    background-color: white;
+    padding: 80px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    margin-top: 0;
+}
+#kontak{
+    font-family: 'Fredoka';
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #BF2A52;
+}
+#abc{
+    font-family: 'Lato';
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+#contact-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+.contact-item{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3 ease, transform 0.3s ease, box-shadow 0.3 ease;
+}
+.contact-item i{
+    font-size: 24px;
+    margin-right: 15px;
+}
+.contact-item span:first-of-type{
+    flex-grow: 1;
+    text-align: left;
+}
+.contact-item .handle {
+    font-size: 14px;
+    opacity: 0.8;
+}
+.contact-item:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    filter: brightness(1.1);
+}
+.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.whatsapp {
+    background-color: #25D366;
+}
+.email {
+    background-color: #DB4437;
+}
+span{
+    font-family: 'Fredoka';
+}
+#main-footer{
+    padding: 20px;
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--accent-pink);
+    width: 100%;
+    flex-shrink: 0;
+    font-size: 30px;
+}
